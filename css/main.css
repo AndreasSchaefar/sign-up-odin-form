@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+}
+
+:root {
+    --accent-color: #007526;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    /* flex-flow: column wrap; */
+    /* When media is below, change to column !IMPORTANT */
+}
+
+#picture-with-logo {
+    background: url(/images/back.jpg) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.logo-box {
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo-image {
+    max-width: 150px;
+}
+
+#sign-up-form-section {
+    flex: 2;
+}
+
+#sign-up-form {
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 270px));
+    grid-gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding-top: 50px;
+    padding: 50px 20px;
+}
+
+.para {
+    padding-top: 20px;
+}
+
+
+.btn-submit {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    color: #D0D7B5;
+    padding: 12px 26px;
+}
+
+#sign-up-form input {
+    padding: 5px;
+    max-width: 250px;
+    font-size: 1.2rem;
+}
+
+#sign-up-form label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.form-container {
+    background-color: #D0D7B5;
+}
+
+.header { 
+    padding: 50px 0 30px 0;
+}
+
+.form-container p {
+    padding: 20px 
+}
