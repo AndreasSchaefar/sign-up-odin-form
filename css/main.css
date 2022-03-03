@@ -34,7 +34,7 @@ body {
 
 #banner {
     flex: 1;
-    background: url(/images/background.jpg) no-repeat;
+    background: url(../images/background.jpg) no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -198,7 +198,7 @@ label {
 
     #banner {
         flex: 2;
-        background: url(/images/background.jpg) no-repeat;
+        background: url(../images/background.jpg) no-repeat;
         background-size: cover;
         position: relative;
     }
