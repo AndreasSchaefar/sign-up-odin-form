@@ -1,106 +1,210 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
 *, *::before, *::after {
-    margin: 0;
     padding: 0;
-    font-family: 'Comfortaa', cursive;
+    margin: 0;
     font-size: 16px;
+    box-sizing: border-box;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 :root {
-    --accent-color: #007526;
+    --electric-blue: #373e98;
+    --hot-pink: #f16775;
+    --shocking-yelow: #fee36e;
+    --chartreuse-ish: #ceb92c;
+    --darkest-gray: #2a2a2a;
+    --darkest-gray-alfa: rgba(42, 42, 42, .85);
+    --light-border: #E5E7EB;
+    --blue-border:rgb(42, 83, 245);
+    --red-border: rgb(235, 51, 51);
+    --light-red: rgb(237, 140, 140);
 }
 
-.upper {
-    text-transform: uppercase;
-}
 
-.container {
+body {
+    background-color: var(--electric-blue);
+    color: white;
     display: flex;
     /* flex-flow: column wrap; */
-    /* When media is below, change to column !IMPORTANT */
+    min-height: 100vh;
 }
 
-#picture-with-logo {
-    background: url(/images/back.jpg) no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    text-align: center;
+
+
+#banner {
     flex: 1;
+    background: url(/images/background.jpg) no-repeat;
+    background-size: cover;
     position: relative;
 }
 
-.logo-box {
-    margin-top: 100px;
-    background-color: rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.logo-image {
-    max-width: 150px;
-}
-
-#sign-up-form-section {
+#form {
     flex: 2;
 }
 
-#sign-up-form {
-    padding: 30px 20px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(150px, 270px));
-    grid-gap: 20px;
+
+.upper-case {
+    text-transform: uppercase;
 }
 
-.form-field {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
+.header-1 {
+    font-size: 2rem;
+    position: relative;
 }
 
-.intro-text {
+.header-2 {
     font-size: 1.2rem;
-    font-weight: bolder;
-    padding-top: 50px;
-    padding: 50px 20px;
 }
 
-.para {
-    padding-top: 20px;
+.font-400 {
+    font-weight: 400;
 }
 
+.padding-minor {
+    padding: 0.5rem 1rem;
+}
+
+.padding-right-40 {
+    padding-right: 2rem;
+}
 
 .btn-submit {
-    background-color: var(--accent-color);
     border-radius: 10px;
-    border: none;
-    font-size: 1rem;
-    color: #D0D7B5;
-    padding: 12px 26px;
+    border-style: none;
+    background-color: var(--chartreuse-ish);
+    cursor: pointer;
 }
 
-#sign-up-form input {
-    padding: 5px;
-    max-width: 250px;
-    font-size: 1.2rem;
+.btn-container {
+    position: relative;
 }
 
-#sign-up-form label {
-    font-size: 12px;
-    font-weight: bold;
+
+.btn-submit:hover {
+    background-color: var(--shocking-yelow);
 }
 
-.form-container {
-    background-color: #D0D7B5;
+.login-link:link {
+    text-decoration: inherit;
+    color: var(--shocking-yelow);
+    cursor: pointer;
 }
 
-.header { 
-    padding: 50px 0 30px 0;
+.login-link:visited {
+    text-decoration: inherit;
+    color: var(--shocking-yelow);
+    cursor: pointer;
 }
 
-.form-container p {
-    padding: 20px 
+.login-link:hover {
+    text-decoration: inherit;
+    color: var(--chartreuse-ish);
+    cursor: pointer;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-2-col {
+    /* display: flex;
+    flex-flow: column wrap; */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(7.5rem, 15rem));
+    row-gap: 1rem;
+    column-gap: 4rem;
+}
+
+.padding-main {
+    padding: 4rem 3rem 4rem 3rem;
+}
+
+.padding-bottom {
+    padding-bottom: 2rem;
+}
+
+.header-1::after {
+    content: 'ヒ';
+    position: absolute;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.077);
+}
+
+.padding-top-1 {
+    padding-top: 1rem;
+}
+
+.block {
+    display: block;
+}
+
+.input {
+    border-radius: 5px;
+    border-style: none;
+    border-color: var(--light-border);
+    padding: 0.3rem;
+}
+
+label {
+    padding-bottom: 0.7rem;
+}
+
+
+.jp-text {
+    font-size: 2.3rem;
+    font-family: 'Comfortaa', cursive;
+}
+
+#banner-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkest-gray-alfa);
+    height: 15%;
+    width: 100%;
+    top: 20%;
+}
+
+.input:focus {
+    outline: none;
+    border: solid 2px var(--blue-border); 
+    margin: -2px;
+    box-shadow: 2px 2px 2px var(--darkest-gray);
+}
+
+.error {
+    border: solid 2px var(--red-border);
+    margin: -2px;
+}
+
+.password-error::after {
+    content: "* Passwords do not match";
+    font-size: 0.9rem;
+    color: var(--light-red);
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        flex-flow: column wrap;
+    }
+
+    .grid-2-col {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    #banner {
+        flex: 2;
+        background: url(/images/background.jpg) no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    #banner-text {
+        font-size: 0;
+    }
+
 }

@@ -4,57 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="/css/main.css">
-    <title>Sign Up Form</title>
+    <title>Alien Form</title>
 </head>
 <body>
-    <div class="container">
-        <div id="picture-with-logo">
-            <div class="logo-box">
-                <img src="/images/logo__cropped.png" alt="logo" class="logo-image">
-            </div>
-        </div>
-        <div id="sign-up-form-section">
-            <div id="header">
-                <h1 class="intro-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo rerum voluptate possimus quaerat numquam eveniet voluptas exercitationem dolor blanditiis accusamus explicabo earum iusto quae architecto, consectetur quibusdam placeat cum?</h1>
-                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, dolorem adipisci!</p>
-            </div>
-            <div class="form-container">
-                <p>Let's do this!</p>
-                <form action="" id="sign-up-form">
-                    <div class="form-field">
-                        <label for="firstName" class="upper">first name</label>
-                        <input type="text" name="" id="">
-                    </div>
-                    <div class="form-field">
-                        <label for="lastName" class="upper">last name</label>
-                        <input type="text" name="" id="">
-                    </div>
-                    <div class="form-field">
-                        <label for="email" class="upper">email</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <div class="form-field">
-                        <label for="phoneNumber" class="upper">phone number</label>
-                        <input type="tel" name="phoneNumber" id="phoneNumber">
-                    </div>
-                    <div class="form-field">
-                        <label for="password" class="upper">password</label>
-                        <input type="password" name="password" id="password">
-                    </div>
-                    <div class="form-field">
-                        <label for="confirmPass" class="upper">confirm password</label>
-                        <input type="password" name="confirmPass" id="confirmPass">
-                    </div>
-                </form>
-            </div>
-            <div id="footer">
-                <button type="submit" class="btn-submit">Create Account</button>
-                <div class="para">
-                    Already have an account? <a href="">Log in</a></span>
+    <div id="banner">
+        <div class="jp-text font-400" id="banner-text">大きなタコと女子高生</div>
+    </div>
+    <div class="padding-main" id="form">
+        <header class="padding-bottom">
+            <h1 class="header-1">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</h1>
+            <strong class="header-2 padding-top-1 block">You know you want to.</strong>
+        </header>
+        <main>
+            <strong class="header-2 font-400">Let's do this!</strong>
+            <form action="" id="sign-up-form" class="grid-2-col padding-bottom padding-top-1" method="">
+                <div class="field">
+                    <label for="firstName" class="upper-case font-400">First Name</label>
+                    <input type="text" name="firstName" id="firstName" class="input" required>
                 </div>
+                <div class="field">
+                    <label for="lastName" class="upper-case font-400">Last Name</label>
+                    <input type="text" name="lastName" id="lastName" class="input" required>
+                </div>
+                <div class="field">
+                    <label for="email" class="upper-case font-400">Email</label>
+                    <input type="email" name="email" id="email" class="input" required>
+                </div>
+                <div class="field">
+                    <label for="phoneNumber" class="upper-case font-400">Phone Number</label>
+                    <input type="tel" name="phoneNumber" id="phoneNumber" class="input">
+                </div>
+                <div class="field password-error">
+                    <label for="password" class="upper-case font-400">Password</label>
+                    <input type="password" name="password" id="password" class="input error" required>
+                </div>
+                <div class="field">
+                    <label for="passwordConfirm" class="upper-case font-400">Confirm Password</label>
+                    <input type="password" name="passwordConfirm" id="passwordConfirm" class="input error" required>
+                </div>
+            </form>
+            <div class="btn-container padding-bottom">
+                <button type="submit" form="sign-up-form" class="padding-minor btn-submit">Create Account</button>
+                <!-- <input type="submit" value="Create Account" form="sign-up-form" class="btn-submit padding-minor"> -->
             </div>
-        </div>
+            <p>Already have an account? <a href="https://www.google.com" class="login-link">Log in</a></p>
+        </main>
     </div>
 </body>
 </html>
